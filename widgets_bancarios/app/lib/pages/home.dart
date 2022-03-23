@@ -1,6 +1,7 @@
 import 'package:album/domain/use_cases/album/album_use_cases.dart';
 import 'package:album/infraestructure/driven_adapters/get_album_api/album_api.dart';
 import 'package:album/ui/pages/album_page.dart';
+import 'package:app/app_routes.dart';
 import 'package:app/config/album_inherited.dart';
 
 import 'package:flutter/material.dart';
@@ -8,8 +9,8 @@ import 'package:flutter/material.dart';
 import '../services/custom_album_api.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const MyHomePage({Key? key}) : super(key: key);
+  
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const  Text('Arquitectura referencia Widgets'),
       ),
       body: Center(
         child: Column(
@@ -49,9 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             ElevatedButton(
-                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) =>
-                        AlbumPage(albumUseCase: AlbumInheritedWidget.of(context).getAlbumUseCase))),
+                onPressed: () => Navigator.of(context).pushNamed(AppRoutes.album),
                 child: const Text('IR A ALBUM'))
           ],
         ),

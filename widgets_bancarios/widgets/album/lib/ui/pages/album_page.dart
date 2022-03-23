@@ -1,11 +1,10 @@
 import 'package:album/domain/model/album/album.dart';
-import 'package:album/domain/use_cases/album/album_use_cases.dart';
 import 'package:album/ui/common/album_tile.dart';
 import 'package:flutter/material.dart';
 
 class AlbumPage extends StatefulWidget {
-  final GetAlbumUseCase albumUseCase;
-  const AlbumPage({Key? key, required this.albumUseCase}) : super(key: key);
+  final Future<List<Album>> albumList;
+  const AlbumPage({Key? key, required this.albumList}) : super(key: key);
 
   @override
   State<AlbumPage> createState() => _AlbumPageState();
@@ -16,7 +15,7 @@ class _AlbumPageState extends State<AlbumPage> {
   @override
   void initState() {
     super.initState();
-    albumList = widget.albumUseCase.getAll();
+    albumList = widget.albumList;
   }
   @override
   Widget build(BuildContext context) {
