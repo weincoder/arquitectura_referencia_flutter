@@ -1,16 +1,12 @@
-import 'package:album/domain/use_cases/album/album_use_cases.dart';
-import 'package:album/infraestructure/driven_adapters/get_album_api/album_api.dart';
-import 'package:album/ui/pages/album_page.dart';
+
 import 'package:app/app_routes.dart';
-import 'package:app/config/album_inherited.dart';
+
 
 import 'package:flutter/material.dart';
 
-import '../services/custom_album_api.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
-  
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -18,9 +14,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  late AlbumApi albumApi;
-  late CustomAlbumApi customAlbumApi;
-  late GetAlbumUseCase getAlbumUseCase;
   @override
   void initState() {
     super.initState();
