@@ -1,4 +1,5 @@
 import 'package:design_system_weincode/tokens/typography.dart';
+import 'package:flutter/material.dart';
 
 class WeincodeTypographyFoundation{
   WeincodeTypographyFoundation._();
@@ -20,5 +21,8 @@ class WeincodeTypographyFoundation{
   static const double fontSizeSmall= WeincodeTypography.sizeXXS;
   static const double fontSizeXSmall = WeincodeTypography.sizeXXS;
 
+
+  //
+  static const TextStyle buttonStyle = TextStyle();
 }
 
