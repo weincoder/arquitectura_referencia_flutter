@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 class AlbumApi extends AlbumGateway{
   @override
   Future<List<Album>> getAll()  async {
-    print('api config widget 👾');
+    
     Uri url = Uri.parse("https://jsonplaceholder.typicode.com/photos/");
     final response = await  http.get(url);
     if (response.statusCode  == 200){

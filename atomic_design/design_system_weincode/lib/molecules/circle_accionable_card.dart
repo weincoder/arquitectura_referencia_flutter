@@ -1,3 +1,4 @@
+import 'package:design_system_weincode/atoms/weincode_asset_image.dart';
 import 'package:design_system_weincode/foundations/colors.dart';
 import 'package:design_system_weincode/foundations/sizes.dart';
 import 'package:flutter/material.dart';
@@ -26,10 +27,7 @@ class WeincodeCircleAccionableCard extends StatelessWidget {
             height: WeincodeSizesFoundation.sizeCircleAccionableCard,
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Image.asset(
-                routeAssetImage,
-                width: 100,
-              ),
+            WeincodeAssetImage(path: routeAssetImage, widthImage: 100),
               Text(
                 title,
                 style: Theme.of(context).textTheme.headline6,
