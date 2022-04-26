@@ -26,4 +26,5 @@ class WeincodeColorsFoundation {
   static const Color bodyColor = WeincodeColors.scale04;
   static const Color bodyTextColor = WeincodeColors.scale04;
   static const Color cardBgColor = WeincodeColors.scale02;
+  static const Color cardCircularBgColor = WeincodeColors.statusInfo;
 }

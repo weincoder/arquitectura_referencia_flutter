@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:design_system_weincode/molecules/circle_accionable_card.dart';
+import 'package:design_system_weincode/atoms/weincode_separeted.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -7,43 +9,41 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('ShowcaseApp🛒')),
-      body: Center(
-          child: Column(
+      body: ListView(
         children: [
-          Text(
-            'Welcome 👾',
-            style: Theme.of(context).textTheme.headline4,
+          const WeincodeSepareted(nSepareted: 0.5),
+          WeincodeCircleAccionableCard(
+            title: 'Atoms',
+            routeAssetImage: 'assets/images/atoms.png',
+            actionCard: () {},
           ),
-          ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Atoms ⚛',
-                style: Theme.of(context).textTheme.headline6,
-              )),
-          ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Molecules 🧩',
-                style: Theme.of(context).textTheme.headline6,
-              )),
-          ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Templates 𝍌',
-                style: Theme.of(context).textTheme.headline6,
-              )),
-          ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                'Pages 📱',
-                style: TextStyle(color: Colors.white),
-              )),
+          const WeincodeSepareted(nSepareted: 0.5),
+          WeincodeCircleAccionableCard(
+            title: 'Molecules',
+            routeAssetImage: 'assets/images/molecules.png',
+            actionCard: () {},
+          ),
+          const WeincodeSepareted(nSepareted: 0.5),
+          WeincodeCircleAccionableCard(
+            title: 'Organisms',
+            routeAssetImage: 'assets/images/organisms.png',
+            actionCard: () {},
+          ),
+          const WeincodeSepareted(nSepareted: 0.5),
+          WeincodeCircleAccionableCard(
+            title: 'Templates',
+            routeAssetImage: 'assets/images/templates.png',
+            actionCard: () {},
+          ),
+          const WeincodeSepareted(nSepareted: 0.5),
+          WeincodeCircleAccionableCard(
+            title: 'Pages',
+            routeAssetImage: 'assets/images/pages.png',
+            actionCard: () {},
+          ),
+          // Image.asset('assets/images/atoms.png'),
         ],
-      )),
-      // bottomNavigationBar: BottomNavigationBar(items: const [
-      //   BottomNavigationBarItem(icon: Icon(Icons.access_time)),
-      //   BottomNavigationBarItem(icon: Icon(Icons.ac_unit)),
-      // ]),
+      ),
     );
   }
 }
