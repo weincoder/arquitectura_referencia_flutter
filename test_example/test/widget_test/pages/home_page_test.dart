@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:design_system_weincode/molecules/card_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:test_example/helpers/constants.dart';
@@ -11,7 +14,7 @@ void main() {
     );
   }
 
-  group('Find the home page widgets', () {
+  group('Find the Home page widgets 🔍', () {
     testWidgets('Check we can find the height textfield',
         (WidgetTester tester) async {
       //Arrenge
@@ -43,7 +46,7 @@ void main() {
     });
   });
 
-  group('Interaction with Home Page Widgets', () {
+  group('Interaction with Home Page Widgets 🧑🏽‍💻👩🏻‍💻', () {
     testWidgets('Check we can type in the height textfield',
         (WidgetTester tester) async {
       // Arrenge
@@ -70,7 +73,21 @@ void main() {
       expect(find.text(expectedValue), findsOneWidget);
     });
 
+    testWidgets('Check we can press the button',
+        (WidgetTester tester) async {
+      //Arrenge
+      await tester.pumpWidget(fakeMaterialAppHomePage());
+      final calculateBMIButton =
+          find.byType(ElevatedButton, skipOffstage: false).first;
+      //Act
+      await tester.tap(calculateBMIButton);
+      await tester.pumpAndSettle();
+      //Assert
+      expect(calculateBMIButton, findsOneWidget);
+    });
+  });
 
+  group('Test Home Page Experience', (){
     testWidgets('check we can calculate the BMI', (WidgetTester tester) async {
       //Arrange
       await tester.pumpWidget(fakeMaterialAppHomePage());
@@ -80,34 +97,17 @@ void main() {
       final heightTextField = find.byKey(const Key('textFieldHeight'));
       final calculateBMIButton =
           find.byType(ElevatedButton, skipOffstage: false).first;
+      const String expectedBMICategory = UserMessages.badWeightMessage;
       //Act
       await tester.enterText(weightTextField, weigth);
       await tester.pump();
       await tester.enterText(heightTextField, heigth);
       await tester.pump();
-      await tester.press(calculateBMIButton);
-      final findElement = find.text(UserMessages.badWeightMessage);
-      expect(find.text(UserMessages.badWeightMessage), findsOneWidget);
+      await tester.tap(calculateBMIButton);
+      await tester.pumpAndSettle();
+      //Assert
+      expect(find.text(expectedBMICategory), findsOneWidget);
+
     });
   });
-
-  //   testWidgets('Check we can press the save password button',
-  //       (WidgetTester tester) async {
-  //     await tester.pumpWidget(MyApp());
-  //     var password = 'Oscar123';
-
-  //     await tester.enterText(find.byType(PasswordTextField), password);
-  //     expect(find.byType(PasswordChip), findsNothing);
-  //     expect(find.widgetWithText(PasswordTextField, password), findsOneWidget);
-
-  //     final widget1 = find.byType(SaveButtonPassword);
-  //     await tester.tap(widget1);
-  //     //await tester.press(widget1); //press not working
-  //     await tester.pumpAndSettle();
-
-  //     //We should find textfield empty and listtile with the password added
-  //     expect(find.widgetWithText(PasswordTextField, ''), findsOneWidget);
-  //     expect(find.byType(PasswordChip), findsOneWidget);
-  //   });
-  // });
 }

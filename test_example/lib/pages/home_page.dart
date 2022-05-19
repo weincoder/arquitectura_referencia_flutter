@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           child: ListView(
             children: <Widget>[
               const SizedBox(
-                height: 34,
+                height: 8,
               ),
               Text(
                 'Calcula tu IMC 🧮',
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                     ],
                   )),
               const SizedBox(
-                height: 34,
+                height: 8,
               ),
               SizedBox(
                   width: 350,
@@ -70,14 +70,15 @@ class _HomePageState extends State<HomePage> {
                     ],
                   )),
               const SizedBox(
-                height: 34,
+                height: 8,
               ),
               Image.asset(
                 'images/bmi.png',
-                width: 200,
+                width: 150,
+                height: 150,
               ),
               const SizedBox(
-                height: 34,
+                height: 8,
               ),
               ElevatedButton(
                 key: const Key('buttonCalculateBMI'),

@@ -24,24 +24,26 @@ class WeincodeCardTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           WeincodeAssetImage(path: path, widthImage: 120),
-          Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Container(
-                width: 300,
-                padding: const EdgeInsets.fromLTRB(10, 2, 10, 0),
-                child: Text(
-                  title,
-                  style: Theme.of(context).textTheme.headline5,
-                  textAlign: TextAlign.center,
+          SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                  width: 200,
+                  padding: const EdgeInsets.fromLTRB(10, 2, 10, 0),
+                  child: Text(
+                    title,
+                    style: Theme.of(context).textTheme.headline5,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-              ),
-              Container(
-                width: 300,
-                padding: const EdgeInsets.only(left: 34, top: 21),
-                child: Text(id, style: Theme.of(context).textTheme.headline6),
-              ),
-            ],
+                Container(
+                  width: 200,
+                  padding: const EdgeInsets.only(left: 34, top: 21),
+                  child: Text(id, style: Theme.of(context).textTheme.headline6),
+                ),
+              ],
+            ),
           )
         ],
       ),
