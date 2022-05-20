@@ -1,6 +1,3 @@
-import 'dart:developer';
-
-import 'package:design_system_weincode/molecules/card_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:test_example/helpers/constants.dart';
@@ -30,8 +27,17 @@ void main() {
       await tester.pumpWidget(fakeMaterialAppHomePage());
       //Act
       final weightTextField = find.byKey(const Key('textFieldWeight'));
-      // Assert
+      //Assert
       expect(weightTextField, findsOneWidget);
+    });
+    testWidgets('Check we can find the semantic label of header',
+        (WidgetTester tester) async {
+      //Arrenge
+      await tester.pumpWidget(fakeMaterialAppHomePage());
+      //Act
+      final appHeaderLabel = find.bySemanticsLabel('Amazing 🧪 test🤯');
+      // Assert
+      expect(appHeaderLabel, findsOneWidget);
     });
 
     testWidgets('Check we can find the  calculate BMI  button',
@@ -107,7 +113,8 @@ void main() {
       await tester.pumpAndSettle();
       //Assert
       expect(find.text(expectedBMICategory), findsOneWidget);
-
+      
+    
     });
   });
 }
