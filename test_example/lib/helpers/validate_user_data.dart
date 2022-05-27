@@ -1,6 +1,7 @@
 
 import 'dart:developer';
 
+import 'package:flutter/material.dart';
 import 'package:test_example/helpers/constants.dart';
 
 double getWeight(String weight){
@@ -20,12 +21,14 @@ double getHeight(String height){
   double currentHeigthValue;
   const double maxHeight = 3.0;
   const double minHeight = 0.45;
+
   try {
     currentHeigthValue =  double.parse(height);
     isValidateUserValue(currentHeigthValue, minHeight, maxHeight);
   } catch (e) {
     log(e.toString());
     currentHeigthValue = IndicatorValues.invalidInputIndicator;
+  
   }
   return currentHeigthValue;
 }
