@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage> {
         title: Text(
           widget.title,
           style: const TextStyle(color: Colors.white, fontSize: 34),
+          semanticsLabel: widget.title,
         ),
       ),
       body:
