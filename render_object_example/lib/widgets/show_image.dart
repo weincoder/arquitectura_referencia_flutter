@@ -9,7 +9,7 @@ class ShowImage extends StatelessWidget {
     return Padding(
       key: const Key('show-image-container'),
       padding: const EdgeInsets.all(8.0),
-      child: Image.asset(pathImage),
+      child: Image.asset(pathImage, key: const Key('flutter-image'),),
     );
   }
 }

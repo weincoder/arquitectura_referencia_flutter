@@ -71,6 +71,7 @@ void main() {
       await tester.pumpWidget(fakeMaterialAppHomePage());
       const String weigth = '24as';
       const String expectedValue = '24';
+      
       final weightTextField = find.byKey(const Key('textFieldWeight'));
       //Act
       await tester.enterText(weightTextField, weigth);

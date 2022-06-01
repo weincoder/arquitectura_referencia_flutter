@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:render_object_example/diferent_simple_body.dart';
-import 'package:render_object_example/show_image.dart';
-import 'package:render_object_example/simple_body.dart';
+
+import 'package:render_object_example/widgets/diferent_simple_body.dart';
+import 'package:render_object_example/widgets/simple_body.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:render_object_example/show_image.dart';
+import 'package:render_object_example/widgets/show_image.dart';
+
 
 
 class SimpleBody extends StatefulWidget {

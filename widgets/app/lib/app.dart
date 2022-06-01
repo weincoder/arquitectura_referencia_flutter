@@ -4,6 +4,7 @@ import 'package:album/infraestructure/driven_adapters/get_album_api/album_api.da
 import 'package:album/ui/pages/album_page.dart';
 import 'package:app/app_routes.dart';
 import 'package:app/pages/home.dart';
+import 'package:app/services/custom_album_api.dart';
 
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlbumInheritedWidget(
-        getAlbumUseCase: GetAlbumUseCase(AlbumApi()),
+        getAlbumUseCase: GetAlbumUseCase(CustomAlbumApi()),
         child: MaterialApp(
           onGenerateRoute: (settings) {
             MaterialPageRoute currentMaterialPage;
