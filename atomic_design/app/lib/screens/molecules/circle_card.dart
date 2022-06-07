@@ -13,45 +13,45 @@ class CircleCard extends StatelessWidget {
         style: Theme.of(context).textTheme.headline6,
       ),
       WeincodeCircleAccionableCard(
+          nameOfCardLabel: 'UFO',
+          descriptionOfActionLabel: 'show UFO Info',
           routeAssetImage: 'assets/images/ufo.png',
           title: 'UFO',
           actionCard: () {
-             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text(
-                      'You click inside the UFO')));
+            ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('You click inside the UFO')));
           }),
       Text(
         'Alien',
         style: Theme.of(context).textTheme.headline6,
       ),
       WeincodeCircleAccionableCard(
+          nameOfCardLabel: 'Alien',
+          descriptionOfActionLabel: 'show Alien Info',
           routeAssetImage: 'assets/images/alien.png',
           title: 'Alien',
           actionCard: () {
-             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text(
-                      'You click inside the alien')));
+            ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('You click inside the alien')));
           }),
       Text(
         'Metroid',
         style: Theme.of(context).textTheme.headline6,
       ),
       WeincodeCircleAccionableCard(
+          nameOfCardLabel: 'Metroid',
+          descriptionOfActionLabel: 'show Metroid Info',
           routeAssetImage: 'assets/images/metroid.png',
           title: 'Metroid',
           actionCard: () {
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text(
-                      'You click inside the metroid')));
+            ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('You click inside the metroid')));
           }),
     ];
     return ShowComponentTemplate(
       listOfWidgets: examples,
       title: 'Circle Card',
-      longDescription:
-          'Use this widget when you need clickable circle card',
+      longDescription: 'Use this widget when you need clickable circle card',
     );
   }
-  
-
 }
