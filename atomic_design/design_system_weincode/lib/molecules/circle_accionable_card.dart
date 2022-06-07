@@ -23,7 +23,7 @@ class WeincodeCircleAccionableCard extends StatelessWidget {
     return Semantics(
       label:
           'Tap the $nameOfCardLabel card to execute $descriptionOfActionLabel',
-      child: GestureDetector(
+      child: InkWell(
           excludeFromSemantics: true,
           onTap: actionCard,
           child: Container(
