@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:perfo_example/widgets/fake_element_tile.dart';
 

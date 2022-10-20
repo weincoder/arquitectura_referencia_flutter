@@ -66,6 +66,7 @@ flutter:
   assets:
     - images/low-performance.png
     - images/performance.png
+    - images/fake-video.mov
     - images/global.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
