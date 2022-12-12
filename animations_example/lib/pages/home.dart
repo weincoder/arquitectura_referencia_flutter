@@ -31,6 +31,11 @@ class HomePage extends StatelessWidget {
               onPressed: (() =>
                   Navigator.of(context).pushNamed(AppRoutes.transform)),
               child: const Text('Ejemplo transform')),
+          const WeincodeSepareted(nSepareted: 0.5),
+          ElevatedButton(
+              onPressed: (() =>
+                  Navigator.of(context).pushNamed(AppRoutes.explicitAnimation)),
+              child: const Text('Ejemplo Animaciones Explicitas')),
         ],
       )),
     );
