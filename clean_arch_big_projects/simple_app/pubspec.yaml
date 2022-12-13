@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   domain_wc: ^1.0.0
   infraestructure_wc: ^1.0.0
+    # path: '../infraestructure_wc/'
   design_system_weincode: ^0.0.3
 
 dev_dependencies:
