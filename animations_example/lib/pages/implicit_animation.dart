@@ -10,7 +10,7 @@ class ImplicitAnimationExample extends StatefulWidget {
 
 class _ImplicitAnimationExampleState extends State<ImplicitAnimationExample> {
   double currentFontSize = 13;
-  Color colorContainer = Colors.yellow;
+  Color colorContainer = Colors.black;
   double currentPadding = 13;
   double currentTurn = 0.0;
   @override
@@ -42,7 +42,7 @@ class _ImplicitAnimationExampleState extends State<ImplicitAnimationExample> {
             () {
               currentTurn += 1.0 / 8.0;
               if (currentFontSize == 21) {
-                colorContainer = Colors.yellow;
+                colorContainer = Colors.black;
                 currentFontSize = 13;
                 currentPadding = 13;
               }else{
