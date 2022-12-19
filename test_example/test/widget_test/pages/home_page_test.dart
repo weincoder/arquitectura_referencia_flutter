@@ -114,8 +114,6 @@ void main() {
       await tester.pumpAndSettle();
       //Assert
       expect(find.text(expectedBMICategory), findsOneWidget);
-      
-    
     });
   });
 }
