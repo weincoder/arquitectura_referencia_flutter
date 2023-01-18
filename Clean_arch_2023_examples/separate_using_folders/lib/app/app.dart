@@ -4,11 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:separate_using_folders/config/providers/astronomy_daily_data_provider.dart';
 import 'package:separate_using_folders/config/providers/pokemon_provider.dart';
 import 'package:separate_using_folders/config/routes/app_routes.dart';
-import 'package:separate_using_folders/domain/models/astronomy_daily_data/astronomy_daily_data.dart';
 import 'package:separate_using_folders/ui/pages/home_page.dart';
 import 'package:separate_using_folders/ui/pages/pokemon_page.dart';
 
-import '../pages/show_dayli_data.dart';
+import '../ui/pages/show_dayli_data.dart';
 
 class CleanArchExampleSepareteUsingFolderApp extends ConsumerWidget {
   const CleanArchExampleSepareteUsingFolderApp({super.key});
