@@ -9,6 +9,8 @@ import 'package:separate_using_folders/ui/pages/pokemon_page.dart';
 
 import '../ui/pages/show_dayli_data.dart';
 
+
+
 class CleanArchExampleSepareteUsingFolderApp extends ConsumerWidget {
   const CleanArchExampleSepareteUsingFolderApp({super.key});
 
@@ -26,8 +28,8 @@ class CleanArchExampleSepareteUsingFolderApp extends ConsumerWidget {
                     )));
           case (AppRoutes.astronomyDailyData):
             return MaterialPageRoute(
-                builder: ((context) => ShowDayliDataPage(
-                  astronomyDailyData: ref.watch(astronomyDailyDataProvider).getAstronomyDayliData(),
+                builder: ((context) => ShowDailyDataPage(
+                  astronomyDailyData: ref.watch(astronomyDailyDataProvider).getAstronomydailyData(),
                     )));
           default:
             return MaterialPageRoute(builder: ((context) => const HomePage()));

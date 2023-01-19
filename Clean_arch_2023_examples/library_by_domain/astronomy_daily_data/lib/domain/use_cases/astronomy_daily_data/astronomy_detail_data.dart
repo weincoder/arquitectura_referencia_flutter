@@ -4,5 +4,5 @@ import '../../models/astronomy_daily_data/gateway/astronomy_daily_data_gateway.d
 class AstronomyDailyDataUseCase{
   final AstronomyDailyDataGateway astronomyDailyDataGateway;
   AstronomyDailyDataUseCase(this.astronomyDailyDataGateway);
-  Future<AstronomyDailyData> getAstronomydailyData() => astronomyDailyDataGateway.getAstronomyDailyData();
+  Future<AstronomyDailyData> getAstronomyDailyData() => astronomyDailyDataGateway.getAstronomyDailyData();
 }

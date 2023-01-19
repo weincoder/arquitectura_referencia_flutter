@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             height: 50.0,
             child: ElevatedButton(
                 child: const Text(
-                  'Show Dayli Data 🛰',
+                  'Show daily Data 🛰',
                   style: TextStyle(fontSize: 21),
                 ),
                 onPressed: () => Navigator.of(context).pushNamed(AppRoutes.astronomyDailyData)),
