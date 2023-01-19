@@ -36,7 +36,7 @@ double getHeight(String height){
 bool isValidateUserValue (double entryValue, double minValue, double maxValue){
   bool isValidWeithInput = true; 
   if (entryValue >maxValue || entryValue <= minValue){
-    throw(DeveloperMessages.entryValueErrorMessage);
+    throw(DeveloperMessages.entryValueErrorMessage2);
   }
   return isValidWeithInput;
 }

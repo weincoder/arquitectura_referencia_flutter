@@ -15,6 +15,9 @@ class UserMessages {
 class DeveloperMessages {
   static const entryValueErrorMessage =
       'the value is greater than max value or smaller than min value';
+
+  static const entryValueErrorMessage2 =
+      'the value is greater than max value or smaller than min valuefdgfdghfd';
 }
 class IndicatorValues{
     static const double invalidInputIndicator = -1;

@@ -17,7 +17,7 @@ class _TransformWidgetExampleState extends State<TransformWidgetExample> {
           child: Transform(
               // Transform widget
               transform: Matrix4.identity()
-                ..setEntry(2, 3, 0.001) // perspective
+                ..setEntry(2, 3, 0.005) // perspective
                 ..rotateX(0.01 * offset.dx) // changed
                 ..rotateY(0.01 * offset.dy), // changed
               alignment: FractionalOffset.center,

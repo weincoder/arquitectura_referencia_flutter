@@ -25,11 +25,11 @@ class _ImplicitAnimationExampleState extends State<ImplicitAnimationExample> {
             duration: const Duration(milliseconds: 500),
             turns:currentTurn,
             child: AnimatedContainer(
-              duration: const Duration(milliseconds: 1500),
+              duration: const Duration(milliseconds: 500),
               color: colorContainer,
               padding: EdgeInsets.all(currentFontSize),
               child: AnimatedDefaultTextStyle(
-                duration: const Duration(milliseconds: 1500),
+                duration: const Duration(milliseconds: 500),
                 style: TextStyle(fontSize: currentFontSize),
                 child: const Text( 'Animaciones Sencillas pero prácticas')),
             ),
